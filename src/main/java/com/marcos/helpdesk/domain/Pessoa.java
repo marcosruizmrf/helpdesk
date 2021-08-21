@@ -36,7 +36,7 @@ public abstract class Pessoa implements Serializable {
 	protected String email;
 	protected String senha;
 	
-	@ElementCollection(fetch = FetchType.EAGER) // buscar automaticamente
+	@ElementCollection(fetch = FetchType.EAGER) // 
 	@CollectionTable(name = "PERFIS")
 	protected Set<Integer> perfis = new HashSet<>();
 	
