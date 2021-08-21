@@ -1,5 +1,6 @@
 package com.marcos.helpdesk.domain;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,8 +10,9 @@ import javax.persistence.OneToMany;
 import com.marcos.helpdesk.domain.enums.Perfil;
 
 @Entity
-public class Tecnico extends Pessoa {
-	
+
+public class Tecnico extends Pessoa implements Serializable {
+
 	private static final long serialVersionUID = 1L;
 	
 	@OneToMany(mappedBy = "tecnico")
@@ -33,7 +35,5 @@ public class Tecnico extends Pessoa {
 	public void setChamados(List<Chamado> chamados) {
 		this.chamados = chamados;
 	}
-	
-	
 
 }
