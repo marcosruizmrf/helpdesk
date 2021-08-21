@@ -21,19 +21,16 @@ public enum Perfil {
 	}
 
 	public static Perfil toEnum(Integer cod) {
-		if(cod == null) {
+		if (cod == null) {
 			return null;
 		}
-		for(Perfil x : Perfil.values()) {
-			if(cod.equals(x.getCodigo())) {
+		for (Perfil x : Perfil.values()) {
+			if (cod.equals(x.getCodigo())) {
 				return x;
 			}
 		}
 
 		throw new IllegalArgumentException("Perfil inválido");
 	}
-
-
-
 
 }
