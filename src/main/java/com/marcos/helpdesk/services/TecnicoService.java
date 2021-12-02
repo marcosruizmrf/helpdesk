@@ -50,10 +50,7 @@ public class TecnicoService {
 		if(obj.isPresent() && obj.get().getId() != objDTO.getId()) {
 			throw new DataIntegrityViolationException("E-mail já cadastrado no sistema!");
 		}
-		
-		
+			
 	}
 	
-
-
 }
